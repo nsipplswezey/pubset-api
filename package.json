@@ -7,10 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test-set": "npm run test-funcional-set && npm run test-pseudoclassical-set && npm run test-es6-set",
-    "test-funcional-set": "mocha test/functional/set.spec.js",
+    "start": "nodemon server.js",
+    "test": "npm run test-set",
+    "test-set": "npm run test-functional-set && npm run test-pseudoclassical-set && npm run test-es6-set",
+    "test-functional-set": "mocha test/functional/set.spec.js",
     "test-pseudoclassical-set": "mocha test/pseudoclassical/set.spec.js",
-    "test-es6-set": "mocha test/es6/set.spec.js",
+    "test-es6-set": "mocha test/es6/set.spec.js"
   },
   "keywords": [],
   "repository": {

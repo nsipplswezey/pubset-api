@@ -12,14 +12,7 @@ var Set = function() {
     };
 
     setInstance.remove = function(element){
-        var index = elements.indexOf(element);
-        if (index !== -1) {
-            elements.splice(index, 1);
-        }
-    };
 
-    setInstance.iterator = function() {
-        return iterator(elements).export();
     };
 
     setInstance.isEmpty =function() {
@@ -27,11 +20,11 @@ var Set = function() {
     };
 
     setInstance.size = function(){
-        return elements.length;
+
     };
 
     setInstance.contains = function(element) {
-        return elements.indexOf(element) !== -1 ? true : false;
+
     };
 
     setInstance.union = function(s) {
@@ -40,38 +33,6 @@ var Set = function() {
             resultSet.add(elements[i]);
         }
         return resultSet;
-    };
-
-    setInstance.intersect = function(s) {
-        var resultSet = Set();
-        for (var i = 0; i < elements.length; i++) {
-            if (s.contains(elements[i])) {
-                resultSet.add(elements[i]);
-            }
-        }
-        return resultSet;
-    };
-
-    setInstance.difference = function(s) {
-        var resultSet = Set();
-        for (var i = 0; i < elements.length; i++) {
-            if (!s.contains(elements[i])) {
-                resultSet.add(elements[i]);
-            }
-        }
-        return resultSet;
-    };
-
-    setInstance.isSubset = function(s) {
-        if (elements.length <= s.size()) {
-            for (var i = 0; i < elements.length; i++) {
-                if (!s.contains(elements[i])) {
-                    return false;
-                }
-            }
-            return true;
-        }
-        return false;
     };
 
     setInstance.clone = function() {
