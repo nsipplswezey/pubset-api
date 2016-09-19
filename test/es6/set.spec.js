@@ -4,8 +4,8 @@ var expect = require('chai').expect,
 describe('set test', function() {
 
     'use strict';
-    var s1 = new Set();
-    var s2 = new Set();
+    //Instantiate the sets
+
 
     it('should be empty sets', function() {
         expect(s1.isEmpty()).to.be.equal(true);

@@ -5,7 +5,10 @@ const server = http.createServer();
 function requestHandler(request, response){
   const newSet = Set();
 
-  //receive the body
+  //the body of an http request comes in chunks
+  request.on('data',function(chunk){
+    
+  })
 
   //make a set out of it
 
